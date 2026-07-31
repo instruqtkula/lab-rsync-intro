@@ -41,20 +41,20 @@ resource "vm" "fileserver" {
   }
 }
 
-resource exec "setup-fileserver" {
-  script = "scripts/setup-fileserver"
-  daemon = false
-
-  environment = {
-    IGGYS_SSH_PRIVATE_KEY_BASE64 = resource.secret.ssh_key.value
-  }
-}
-
-resource exec "setup-workstation" {
-  script = "scripts/setup-workstation"
-  daemon = false
-
-  environment = {
-    IGGYS_SSH_PRIVATE_KEY_BASE64 = resource.secret.ssh_key.value
-  }
-}
+## resource exec "setup-fileserver" {
+##   script = "scripts/setup-fileserver"
+##   daemon = false
+## 
+##   environment = {
+##     IGGYS_SSH_PRIVATE_KEY_BASE64 = resource.secret.ssh_key.value
+##   }
+## }
+## 
+## resource exec "setup-workstation" {
+##   script = "scripts/setup-workstation"
+##   daemon = false
+## 
+##   environment = {
+##     IGGYS_SSH_PRIVATE_KEY_BASE64 = resource.secret.ssh_key.value
+##   }
+## }
