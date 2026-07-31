@@ -1,17 +1,17 @@
-resource "lab" "main" {
-  title       = "Skeleton Lab"
-  description = "This is the Skeleton Lab.\nYou can use this as a minimal starting point for developing labs.\n\nFor more information, check ./assets/README.md"
+resource "lab" "rsync-intro" {
+  title       = "Rsync Intro"
+  description = "An introduction to the basic use of the rsync file-copying tool"
 
   settings {
     timelimit {
-      duration = "1h"
+      duration = "15m"
     }
 
     idle {
       enabled = true
-      timeout = "15m"
+      timeout = "5m"
     }
   }
 
-  layout = resource.layout.single_panel
+  layout = resource.layout.default
 }
