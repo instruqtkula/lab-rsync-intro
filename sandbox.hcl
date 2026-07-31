@@ -42,7 +42,6 @@ resource "vm" "fileserver" {
 }
 
 resource exec "setup-fileserver" {
-  target = resource.vm.fileserver
   script = "scripts/setup-fileserver"
   daemon = false
 
@@ -52,7 +51,6 @@ resource exec "setup-fileserver" {
 }
 
 resource exec "setup-workstation" {
-  target = resource.vm.workstation
   script = "scripts/setup-workstation"
   daemon = false
 
