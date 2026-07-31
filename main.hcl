@@ -14,4 +14,14 @@ resource "lab" "rsync-intro" {
   }
 
   layout = resource.layout.default
+
+  content {
+    chapter "getting_started" {
+      title = "Getting Started"
+
+      page "the_environment" {
+        reference = resource.page.the_environment
+      }
+    }
+  }
 }
