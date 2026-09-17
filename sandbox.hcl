@@ -9,7 +9,9 @@ resource "vm" "workstation" {
   }
 
   image {
-    name = "instruqt-kula/sgt-rsync-workstation-1775072433"
+    name     = "europe-west1-docker.pkg.dev/instruqt-kula/lab-images/sgl-rsync-workstation:1789680867"
+    username = "_json_key_base64"
+    password = resource.secret.lab_images_reader_b64.value
   }
 
   resources {
@@ -28,7 +30,9 @@ resource "vm" "fileserver" {
   }
 
   image {
-    name = "instruqt-kula/sgt-rsync-fileserver-1775072434"
+    name     = "europe-west1-docker.pkg.dev/instruqt-kula/lab-images/sgl-rsync-fileserver:1789680867"
+    username = "_json_key_base64"
+    password = resource.secret.lab_images_reader_b64.value
   }
 
   resources {
