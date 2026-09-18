@@ -22,6 +22,10 @@ resource "vm" "workstation" {
   network {
     id = resource.network.main.meta.id
   }
+
+  environment = {
+    IGGYS_SSH_PRIVATE_KEY_BASE64 = resource.secret.ssh_key.value
+  }
 }
 
 resource "vm" "fileserver" {
@@ -42,6 +46,10 @@ resource "vm" "fileserver" {
 
   network {
     id = resource.network.main.meta.id
+  }
+
+  environment = {
+    IGGYS_SSH_PRIVATE_KEY_BASE64 = resource.secret.ssh_key.value
   }
 }
 
