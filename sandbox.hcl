@@ -4,8 +4,6 @@ resource "network" "main" {
 }
 
 resource "vm" "workstation" {
-  depends_on = [resource.template.setup-workstation]
-
   config {
     arch = "x86_64"
   }
@@ -31,8 +29,6 @@ resource "vm" "workstation" {
 }
 
 resource "vm" "fileserver" {
-  depends_on = [resource.template.setup-workstation]
-
   config {
     arch = "x86_64"
   }
