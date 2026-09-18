@@ -26,17 +26,11 @@ popd
 # references to them update automatically
 
 cat <<EOT > /home/iggy/.env
-FILESERVER_SRC_DIR="/opt/data/vosp_1000/"
-WORKSTATION_DST_DIR="vosp_1000/"
+FILESERVER_SRC_DIR="{{FILESERVER_SRC_DIR}}"
+WORKSTATION_DST_DIR="{{WORKSTATION_DST_DIR}}"
 EOT
 chown iggy:iggy /home/iggy/.env
 chmod 400 /home/iggy/.env
-
-# Set agent variables so we can use these in challenge assignments
-source /home/iggy/.env
-agent variable set FILESERVER_SRC_DIR "${FILESERVER_SRC_DIR}"
-agent variable set WORKSTATION_DST_DIR "${WORKSTATION_DST_DIR}"
-
 
 echo "Setup done"
 exit 0
