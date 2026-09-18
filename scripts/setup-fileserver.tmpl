@@ -8,12 +8,6 @@ function setup_fail () {
     exit 1
 }
 
-while [ ! -f /opt/instruqt/bootstrap/host-bootstrap-completed ]
-do
-    echo "Waiting for Instruqt to finish booting the virtual machine"
-    sleep 5
-done
-
 # Install SSH key from org secret
 echo "Install ssh key from org secret"
 install -d -o iggy -g iggy -m 700 /home/iggy/.ssh || setup_fail "Creating iggy ssh dir"
