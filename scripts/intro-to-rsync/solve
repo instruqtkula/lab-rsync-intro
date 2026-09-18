@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -euxo pipefail
+
+pushd /home/iggy
+rsync -av --progress --stats fileserver:/opt/data/vosp-1000/ vosp_1000/
+popd

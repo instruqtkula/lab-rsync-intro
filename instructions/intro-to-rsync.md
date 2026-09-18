@@ -23,5 +23,6 @@ You can either click on the "copy" link in the upper right corner of the
 command window above, or you can click on "run". Run it in the [Workstation](tab-0)
 tab.
 
-When you have finished, click on the **Check** button below to verify
-you have completed this challenge successfully.
+When you have finished, run the check below:
+
+<instruqt-task id="intro-to-rsync"></instruqt-task>
