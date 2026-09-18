@@ -24,7 +24,7 @@ resource "vm" "workstation" {
   }
 
   startup_script = template_file("./scripts/setup-workstation.tmpl", {
-    IGGYS_SSH_PRIVATE_KEY_BASE64 = resource.secret.ssh_key
+    IGGYS_SSH_PRIVATE_KEY_BASE64 = resource.secret.ssh_key.value
     FILESERVER_SRC_DIR           = local.fileserver_src_dir
     WORKSTATION_DST_DIR          = local.workstation_dst_dir
   })
