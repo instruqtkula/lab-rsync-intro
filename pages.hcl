@@ -1,4 +1,4 @@
-resource "page" "the_environment" {
-  title = "The Environment"
-  file  = "instructions/environment.md"
+resource "page" "intro-to-rsync" {
+  title = "Introduction to Rsync"
+  file  = "instructions/intro-to-rsync.md"
 }

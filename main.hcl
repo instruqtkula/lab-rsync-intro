@@ -16,11 +16,13 @@ resource "lab" "rsync-intro" {
   layout = resource.layout.default
 
   content {
-    chapter "getting_started" {
-      title = "Getting Started"
+    chapter "__default" {
+      # Create a lab with no chapters, only pages, by putting
+      # in a special __default chapter
+      title = "Default"
 
-      page "the_environment" {
-        reference = resource.page.the_environment
+      page "intro-to-rsync" {
+        reference = resource.page.intro-to-rsync
       }
     }
   }

@@ -3,6 +3,7 @@ resource "terminal" "workstation" {
   target            = resource.vm.workstation
   user              = "iggy"
   group             = "iggy"
+  shell             = "/bin/bash"
   working_directory = "/home/iggy"
 }
 
